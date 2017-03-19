@@ -8,6 +8,9 @@ It connects to a single icinga2 master. Multi-endpoints are not supported yet!
 1. Create your container using compose (preferred)
 2. Setup your services in services.conf (good to know: NodeName="$NODE_NAME")
 3. Reload and restart your MASTER with `icinga2 node update-config && service icinga2 restart`
+4. If you got problems (like `[FAIL] checking Icinga2 configuration. Check '/var/log/icinga2/startup.log' for details. ... failed!`), try the following things (BE CAREFUL!):
+   1. rm -r /etc/icinga2/repository.d/
+   2. icinga2 node remove [nodename]
 
 ## Environment variables Reference
 
