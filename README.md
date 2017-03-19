@@ -4,6 +4,11 @@
 This image represents a preconfigured satellite for icinga2.  
 It connects to a single icinga2 master. Multi-endpoints are not supported yet!
 
+## Setup
+1. Create your container using compose (preferred)
+2. Setup your services in services.conf (good to know: NodeName="$NODE_NAME")
+3. Reload and restart your MASTER with `icinga2 node update-config && service icinga2 restart`
+
 ## Environment variables Reference
 
 | Name | Description |
