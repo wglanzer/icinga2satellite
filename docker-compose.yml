@@ -1,0 +1,9 @@
+satellite:
+  image: cybroken/icinga2satellite
+  volumes:
+    - ./run/services.conf:/etc/icinga2/conf.d/services.conf
+  environment:
+    NODE_NAME: "testcontainer"
+    NODE_ZONE: "containers"
+    MASTER_HOST: "master.example.com"
+    PKI_TICKET: "abcdefghijkd48a1f996d6e36c3183407da197c2" 
