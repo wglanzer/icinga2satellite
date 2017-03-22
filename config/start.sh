@@ -1,6 +1,7 @@
 #!/bin/bash
 CHECKFILE='/opt/start.done'
 MASTER_PORT=${MASTER_PORT:-"5665"}
+NODE_ZONE=${NODE_ZONE:-"$NODE_NAME"}
 
 if [ ! -f '$CHECKFILE' ]; then
   echo "[start.sh] Configuring Icinga2 Satellite..."
