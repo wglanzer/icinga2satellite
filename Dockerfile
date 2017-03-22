@@ -2,7 +2,7 @@ FROM phusion/baseimage
 MAINTAINER Werner Glanzer <wernerglanzer@googlemail.com>
 
 RUN apt-get update
-RUN apt-get -y install wget supervisor
+RUN apt-get -y install wget supervisor nagios-plugins
 
 # Install Icinga2
 RUN wget -O - http://packages.icinga.org/icinga.key | apt-key add - && \
